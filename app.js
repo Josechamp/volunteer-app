@@ -19,7 +19,7 @@ const User         = require('./models/User');
 
 mongoose.Promise = Promise;
 mongoose
-  .connect('mongodb://localhost/project-2', {useMongoClient: true})
+  .connect('mongodb://localhost/deploy-exercise', {useMongoClient: true})
   .then(() => {
     console.log('Connected to Mongo!')
   }).catch(err => {
