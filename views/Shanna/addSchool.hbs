@@ -1,0 +1,65 @@
+<!-- views/shanna/addEvent.hbs -->
+<h2>Add School to System</h2>
+
+<form action="/addSchool" method="POST" id="form-container">
+
+  <label for="name"> School Name </label>
+  <input id="name" type="text" name="name" placeholder="Name">
+  
+  <br><br>
+  
+  <label for="location"> Location </label>
+  <input id="location" type="text" name="location" placeholder="Location">
+  
+  <br><br>
+  
+  <label for="POC"> Point of Contact </label>
+  <input id="POC" type="text" name="POC" placeholder="POC">
+  
+  <br><br>
+  
+  <label for="number"> Phone for POC</label>
+  <input id="number" type="text" name="number" placeholder="Number">
+ 
+  
+  <br><br>
+  
+  <label for="description"> Description </label>
+  <textarea rows = "4" cols = "50" id="description" name="description"> 
+	Description
+  </textarea>
+  
+  {{#if message}}
+    <div class="error-message">{{ message }}</div>
+  {{/if}}
+  
+  <br><br>
+
+  <button>Add Event</button>
+</form>
+
+<h2>Schools in System</h2>
+
+<table style="width:100%">
+  <tr>
+    <th>School Name</th>
+    <th>Location</th> 
+    <th>POC</th>
+	<th>Number</th> 
+    <th>Description</th>
+  </tr>
+  
+   {{#each Schools}}
+  <tr>
+    <th>{{this.name}}</th>
+    <th>{{this.location}}</th> 
+    <th>{{this.point_of_contact}}</th>
+	<th>{{this.number}}</th> 
+    <th>{{this.description}}</th>
+	<th> <button type = "button"> Edit </button> </th>
+	<th> <button type = "button"> Delete </button> </th>
+  </tr>
+  {{/each}}
+
+  
+</table>

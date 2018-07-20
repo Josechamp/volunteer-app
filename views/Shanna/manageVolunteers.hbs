@@ -1,0 +1,24 @@
+<h2>Volunteers</h2>
+
+<table style="width:100%">
+  <tr>
+    <th>Name</th>
+    <th>email</th> 
+    <th>number</th>
+	<th>userType</th> 
+  </tr>
+  
+  {{#each Users}}
+  <tr>
+    <th>{{this.name}}</th>
+    <th>{{this.email}}</th> 
+    <th>{{this.number}}</th>
+	<th>{{this.userType}}</th> 
+	<th> <form action = "/ban/{{this._id}}" method = "POST" id="form-container">>
+		 <button> Ban </button> 
+	</form> </th>
+  </tr>
+  {{/each}}
+
+  
+</table>

@@ -1,0 +1,14 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+
+.vertical-offset-100 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px; }
+
+a {
+  color: #00B7FF; }
+
+/*# sourceMappingURL=style.css.map */

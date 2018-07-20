@@ -1,0 +1,29 @@
+<!-- views/auth/signup.hbs -->
+<h2>Signup</h2>
+
+<form action="/profile/{{User._id}}/updateProfile" method="POST" id="form-container">
+  
+  <label for="Name">Name</label>
+  <input id="Name" type="text" name="Name" placeholder="{{User.name}}">
+  <br><br>
+  
+  <label for="email"> email</label>
+  <input id="email" type="text" name="email" placeholder="{{User.email}}">
+  <br><br>
+  
+  <label for="username">Username</label>
+  <input id="username" type="text" name="username" placeholder="{{User.username}}">
+  <br><br>
+  
+  <label for="number"> Number </label>
+  <input id="number" type="text" name="number" placeholder=" {{User.number}}">
+  <br><br>
+
+  {{#if message}}
+    <div class="error-message">{{ message }}</div>
+  {{/if}}
+  <br><br>
+
+  <button>Edit Profile</button>
+
+</form>

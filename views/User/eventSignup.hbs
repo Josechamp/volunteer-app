@@ -1,0 +1,22 @@
+<h2>Events in System</h2>
+
+<table style="width:100%">
+  <tr>
+    <th>Leader</th>
+    <th>Location</th> 
+    <th>Time</th>
+	<th>Grade</th> 
+  </tr>
+  
+  {{#each Events}}
+  <tr>
+    <th>{{this.leader}}</th>
+    <th>{{this.location}}</th> 
+    <th>{{this.time}}</th>
+	<th>{{this.grade}}</th> 
+	<th> <button type = "button"> Sign Up </button> </th>
+  </tr>
+  {{/each}}
+
+  
+</table>

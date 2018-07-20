@@ -1,0 +1,67 @@
+<!-- views/shanna/addEvent.hbs -->
+<h2>Add School Outreach Event</h2>
+
+<form action="/addEvent" method="POST" id="form-container">
+	
+	<label for="leader"> Leader </label>
+    <select id = "leader" name = "leader">
+	  {{#each Users}}
+		<option value= {{this.name}}> {{this.name}}</option>
+	  {{/each}}
+	</select>
+  
+  <br><br>
+  
+  <label for="location"> Location</label>
+  <select id = "location" name = "location">
+	  {{#each Schools}}
+		<option value= {{this.name}}> {{this.name}}</option>
+	  {{/each}}
+	</select>
+  
+  <br><br>
+  
+  <label for="time"> Time </label>
+  <input id="time" type="text" name="time" placeholder="01/01/18 - 2:30PM">
+  
+  <br><br>
+  
+  <label for="grade"> Grade </label>
+  <input id="grade" type="text" name="grade" placeholder="3rd">
+  
+  {{#if message}}
+    <div class="error-message">{{ message }}</div>
+  {{/if}}
+  
+  <br><br>
+
+  <button>Add Event</button>
+</form>
+
+<h2>Manage School Outreach Evenst</h2>
+
+<table style="width:100%">
+  <tr>
+    <th> Leader </th>
+    <th> Location </th> 
+    <th> Time </th>
+	<th> Grade </th> 
+  </tr>
+  
+  {{#each Events}}
+  <tr>
+    <th>{{this.leader}}</th>
+    <th>{{this.location}}</th> 
+    <th>{{this.time}}</th>
+	<th>{{this.grade}}</th> 
+	<th> <form action = "" method = "POST" id="form-container">>
+		 <button> Edit </button> 
+	</form> </th>
+	<th> <form action = "" method = "POST" id="form-container">>
+		 <button> Delete </button> 
+	</form> </th>
+  </tr>
+  {{/each}}
+
+  
+</table>
