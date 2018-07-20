@@ -17,9 +17,11 @@ const flash = require("connect-flash");
 
 const User         = require('./models/User');
 
+//console.log(process.env);
+
 mongoose.Promise = Promise;
 mongoose
-  .connect('mongodb://localhost/deploy-exercise', {useMongoClient: true})
+  .connect("mongodb://heroku_68hh0d9f:4l1a7au7q70cd6h72akhcd63nq@ds145871.mlab.com:45871/heroku_68hh0d9f", {useMongoClient: true})
   .then(() => {
     console.log('Connected to Mongo!')
   }).catch(err => {
